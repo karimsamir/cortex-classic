@@ -1,0 +1,85 @@
+{
+    "name": "rinvex/laravel-composer",
+    "description": "Rinvex Composer is an intuitive package that utilizes Composer Plugin API to support additional actions during installation, such as installing packages outside of the default vendor library and running custom scripts during install, update, and uninstall processes.",
+    "type": "composer-plugin",
+    "keywords": [
+        "rinvex",
+        "module",
+        "cortex",
+        "laravel",
+        "composer",
+        "modulable",
+        "composable",
+        "installer",
+        "extension",
+        "package",
+        "plugin"
+    ],
+    "license": "MIT",
+    "homepage": "https://rinvex.com",
+    "support": {
+        "email": "help@rinvex.com",
+        "issues": "https://github.com/rinvex/laravel-composer/issues",
+        "source": "https://github.com/rinvex/laravel-composer",
+        "docs": "https://github.com/rinvex/laravel-composer/README.md"
+    },
+    "authors": [
+        {
+            "name": "Rinvex LLC",
+            "homepage": "https://rinvex.com",
+            "email": "help@rinvex.com"
+        },
+        {
+            "name": "Abdelrahman Omran",
+            "homepage": "https://omranic.com",
+            "email": "me@omranic.com",
+            "role": "Project Lead"
+        },
+        {
+            "name": "The Generous Laravel Community",
+            "homepage": "https://github.com/rinvex/laravel-composer/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "composer-plugin-api": "*",
+        "rinvex/laravel-support": "*",
+        "symfony/console": "*",
+        "laravel/framework": "^12.0"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "*",
+        "composer/composer": "*",
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rinvex\\Composer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rinvex\\Composer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rinvex\\Composer\\Providers\\ComposerServiceProvider"
+            ]
+        },
+        "class": [
+            "Rinvex\\Composer\\Models\\Plugin"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
