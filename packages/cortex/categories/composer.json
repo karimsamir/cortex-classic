@@ -1,0 +1,108 @@
+{
+    "name": "cortex/categories",
+    "description": "Cortex Categories is a flexible and extensible package for managing categories in multi-lingual, multi-tenant applications.",
+    "keywords": [
+        "rinvex",
+        "cortex",
+        "categories",
+        "laravel",
+        "multi-lingual",
+        "multi-tenant",
+        "bootstrap",
+        "module"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://rinvex.com",
+    "support": {
+        "email": "help@rinvex.com",
+        "issues": "https://github.com/rinvex/cortex/issues",
+        "source": "https://github.com/rinvex/cortex",
+        "docs": "https://github.com/rinvex/cortex/blob/master/README.md"
+    },
+    "authors": [
+        {
+            "name": "Rinvex LLC",
+            "homepage": "https://rinvex.com",
+            "email": "help@rinvex.com"
+        },
+        {
+            "name": "Abdelrahman Omran",
+            "homepage": "https://omranic.com",
+            "email": "me@omranic.com",
+            "role": "Project Lead"
+        },
+        {
+            "name": "The Generous Laravel Community",
+            "homepage": "https://github.com/rinvex/cortex/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.3.0",
+        "laravel/framework": "^11.0.0",
+        "illuminate/support": "^11.0.0",
+        "illuminate/contracts": "^11.0.0",
+        "illuminate/database": "^11.0.0",
+        "cortex/foundation": "*",
+        "rinvex/laravel-support": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "barryvdh/laravel-debugbar": "^3.6.0",
+        "barryvdh/laravel-ide-helper": "^2.14.0",
+        "beyondcode/laravel-dump-server": "^1.7.0",
+        "beyondcode/laravel-query-detector": "^1.6.0",
+        "codedungeon/phpunit-result-printer": "^0.32.0",
+        "fakerphp/faker": "^1.19.0",
+        "itsgoingd/clockwork": "^5.1.0",
+        "mockery/mockery": "^1.6.0",
+        "nunomaduro/collision": "^8.0.0",
+        "phpunit/phpunit": "^11.0.0",
+        "symfony/thanks": "^1.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cortex\\Categories\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate --ansi --ifnot"
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi --ifnot"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "rinvex/laravel-composer": true,
+            "composer/package-versions-deprecated": true,
+            "symfony/thanks": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "rinvex/tmp-lord-laroute",
+                "barryvdh/laravel-debugbar",
+                "appstract/laravel-opcache",
+                "mariuzzo/laravel-js-localization"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

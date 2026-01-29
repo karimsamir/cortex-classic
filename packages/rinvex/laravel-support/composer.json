@@ -1,0 +1,28 @@
+{
+    "name": "rinvex/laravel-support",
+    "description": "Rinvex Laravel Support Package",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3.0",
+        "illuminate/support": "^11.0.0",
+        "illuminate/contracts": "^11.0.0",
+        "illuminate/database": "^11.0.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0.0",
+        "phpunit/phpunit": "^11.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rinvex\\LaravelSupport\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rinvex\\LaravelSupport\\Providers\\SupportServiceProvider"
+            ]
+        }
+    }
+}

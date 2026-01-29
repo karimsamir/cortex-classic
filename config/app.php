@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Facade;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -151,10 +150,7 @@ return [
     */
 
     'providers' => [
-
-        /*
-         * Laravel Framework Service Providers...
-         */
+        // Priority 1: Laravel core
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -179,6 +175,20 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        /*
+         * Priority 2: Vendor packages (Cortex Foundation loads here)
+         */
+        Cortex\Foundation\Providers\FoundationServiceProvider::class,
+
+        /*
+         * Priority 3: Cortex modules and extensions
+         * (auto-loaded via package:discover)
+         */
+
+        /*
+         * Priority 4: Application providers
+         */
+        App\Providers\...,
     ],
 
     /*
@@ -208,7 +218,6 @@ return [
     */
 
     'provider_loading' => [
-
         'priority_1' => [
             'laravel/',
         ],
@@ -243,7 +252,6 @@ return [
             'cortex/foundation',
             'cortex/tenants',
         ],
-
     ],
 
     /*
@@ -258,5 +266,4 @@ return [
     */
 
     'domains' => array_reduce(explode(',', env('APP_DOMAINS')), fn($carry, $item) => $carry + [($temp = explode(';', $item))[0] => explode('|', $temp[1])], []),
-
 ];
