@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Cortex\Foundation\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
@@ -7,33 +9,33 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 class Kernel extends HttpKernel
 {
     /**
-     * The application's global HTTP middleware stack.
+     * Temporary store for disabled global middleware.
      *
-     * These middleware are run during every request to your application.
-     *
-     * @var array<int, class-string|string>
+     * @var array
      */
-    protected $middleware = [
-        //
-    ];
+    protected array $disabledGlobalMiddleware = [];
 
     /**
-     * The application's route middleware groups.
+     * Disable global middleware.
      *
-     * @var array<string, array<int, class-string|string>>
+     * @return void
      */
-    protected $middlewareGroups = [
-        //
-    ];
+    public function disableGlobalMiddleware(): void
+    {
+        $this->disabledGlobalMiddleware = $this->middleware;
+
+        $this->middleware = [];
+    }
 
     /**
-     * The application's middleware aliases.
+     * Enable global middleware.
      *
-     * Aliases may be used instead of class names to conveniently assign middleware to routes and groups.
-     *
-     * @var array<string, class-string|string>
+     * @return void
      */
-    protected $middlewareAliases = [
-        //
-    ];
+    public function enableGlobalMiddleware(): void
+    {
+        $this->middleware = $this->disabledGlobalMiddleware;
+
+        $this->disabledGlobalMiddleware = [];
+    }
 }

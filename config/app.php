@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Facade;
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -28,7 +29,7 @@ return [
     'tagline' => 'Rinvex Cortex is a solid foundation for enterprise solutions, that provides a flexible and extensible architecture for building multi-lingual, multi-tenant applications with content management, themeable views, application modules and much more.',
 
     // Application Copyright
-    'copyright' => 'Copyright &copy; 2016-'.date('Y').', Rinvex LLC. All rights reserved.',
+    'copyright' => 'Copyright &copy; 2016-' . date('Y') . ', Rinvex LLC. All rights reserved.',
 
     /*
     |--------------------------------------------------------------------------
@@ -150,12 +151,15 @@ return [
     */
 
     'providers' => [
-        // Priority 1: Laravel core
+
+        /*
+         * Laravel Framework Service Providers...
+         */
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
-        //Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
@@ -168,27 +172,13 @@ return [
         Illuminate\Pipeline\PipelineServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\Redis\RedisServiceProvider::class,
-        //Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
-        //Cortex\Foundation\Providers\SessionServiceProvider::class,
-        //Cortex\Foundation\Providers\TranslationServiceProvider::class,
+        Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
+        Cortex\Foundation\Providers\SessionServiceProvider::class,
+        Cortex\Foundation\Providers\TranslationServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        /*
-         * Priority 2: Vendor packages (Cortex Foundation loads here)
-         */
-        Cortex\Foundation\Providers\FoundationServiceProvider::class,
-
-        /*
-         * Priority 3: Cortex modules and extensions
-         * (auto-loaded via package:discover)
-         */
-
-        /*
-         * Priority 4: Application providers
-         */
-        //App\Providers\...,
     ],
 
     /*
@@ -218,6 +208,7 @@ return [
     */
 
     'provider_loading' => [
+
         'priority_1' => [
             'laravel/',
         ],
@@ -252,6 +243,7 @@ return [
             'cortex/foundation',
             'cortex/tenants',
         ],
+
     ],
 
     /*
@@ -266,4 +258,5 @@ return [
     */
 
     'domains' => array_reduce(explode(',', env('APP_DOMAINS')), fn($carry, $item) => $carry + [($temp = explode(';', $item))[0] => explode('|', $temp[1])], []),
+
 ];

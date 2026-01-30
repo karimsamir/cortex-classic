@@ -6,12 +6,18 @@ use Illuminate\Support\ServiceProvider;
 
 class BoardsServiceProvider extends ServiceProvider
 {
-    public function register()
+    /**
+     * Register services.
+     */
+    public function register(): void
     {
         //
     }
 
-    public function boot()
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
     {
         //
     }
