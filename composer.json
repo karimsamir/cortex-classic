@@ -53,7 +53,70 @@
         },
         {
             "type": "path",
+            "url": "packages/laravel-breadcrumbs",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
             "url": "packages/cortex/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "app/modules/cortex/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/mcamara/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/mariuzzo/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/spatie/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/proengsoft/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/propaganistas/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/pragmarx/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/maatwebsite/*",
             "options": {
                 "symlink": true
             }
@@ -92,6 +155,7 @@
         "laravel/framework": "^12.0.0",
         "laravel/tinker": "^2.8.0",
         "league/flysystem-aws-s3-v3": "^3.0.0",
+        "maatwebsite/excel": "*",
         "rinvex/laravel-support": "*",
         "rinvex/laravel-composer": "*",
         "rinvex/laravel-auth": "*",
@@ -102,13 +166,33 @@
         "rinvex/laravel-menus": "*",
         "predis/predis": "^2.0.0"
     },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Cortex\\Foundation\\": "packages/cortex/foundation/src/",
+            "Cortex\\Auth\\": "packages/cortex/auth/src/",
+            "Cortex\\AuthTenantable\\": "packages/cortex/auth-tenantable/src/",
+            "Cortex\\Boards\\": "packages/cortex/boards/src/",
+            "Cortex\\Categories\\": "packages/cortex/categories/src/",
+            "Cortex\\Pages\\": "packages/cortex/pages/src/",
+            "Cortex\\PagesTenantable\\": "packages/cortex/pages-tenantable/src/",
+            "Cortex\\Tags\\": "packages/cortex/tags/src/",
+            "Cortex\\Tenants\\": "packages/cortex/tenants/src/",
+            "Rinvex\\Auth\\": "packages/rinvex/laravel-auth/src/",
+            "Rinvex\\Categories\\": "packages/rinvex/laravel-categories/src/",
+            "Rinvex\\Composer\\": "packages/rinvex/laravel-composer/src/",
+            "Rinvex\\Menus\\": "packages/rinvex/laravel-menus/src/",
+            "Rinvex\\Pages\\": "packages/rinvex/laravel-pages/src/",
+            "Rinvex\\Support\\": "packages/rinvex/laravel-support/src/",
+            "Rinvex\\Tags\\": "packages/rinvex/laravel-tags/src/",
+            "Rinvex\\Tenants\\": "packages/rinvex/laravel-tenants/src/"
+        },
+        "files": [
+            "packages/cortex/foundation/src/helpers.php"
+        ]
+    },
     "require-dev": {
-        "roave/security-advisories": "dev-master",
         "barryvdh/laravel-debugbar": "^3.6.0",
-        "barryvdh/laravel-ide-helper": "^2.14.0",
-        "beyondcode/laravel-dump-server": "^1.7.0",
-        "beyondcode/laravel-query-detector": "^1.6.0",
-        "codedungeon/phpunit-result-printer": "^0.32.0",
         "fakerphp/faker": "^1.19.0",
         "itsgoingd/clockwork": "^5.1.0",
         "mockery/mockery": "^1.6.0",

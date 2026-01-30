@@ -169,9 +169,9 @@ return [
         Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\Redis\RedisServiceProvider::class,
         //Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
-        Cortex\Foundation\Providers\SessionServiceProvider::class,
-        Cortex\Foundation\Providers\TranslationServiceProvider::class,
-        //Illuminate\Translation\TranslationServiceProvider::class,
+        //Cortex\Foundation\Providers\SessionServiceProvider::class,
+        //Cortex\Foundation\Providers\TranslationServiceProvider::class,
+        Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
@@ -188,7 +188,7 @@ return [
         /*
          * Priority 4: Application providers
          */
-        App\Providers\...,
+        //App\Providers\...,
     ],
 
     /*

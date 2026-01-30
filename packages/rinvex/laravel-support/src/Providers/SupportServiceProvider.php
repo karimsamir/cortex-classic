@@ -20,19 +20,19 @@ class SupportServiceProvider extends ServiceProvider
         // Add strip_tags validation rule
         Validator::extend('strip_tags', function ($attribute, $value) {
             return is_string($value) && strip_tags($value) === $value;
-        }, trans('validation.invalid_strip_tags'));
+        }, 'The :attribute must not contain HTML tags.');
 
         // Add time offset validation rule
         Validator::extend('timeoffset', function ($attribute, $value) {
             return array_key_exists($value, timeoffsets());
-        }, trans('validation.invalid_timeoffset'));
+        }, 'The :attribute must be a valid time offset.');
 
         Collection::macro('similar', function (Collection $newCollection) {
             return $newCollection->diff($this)->isEmpty() && $this->diff($newCollection)->isEmpty();
         });
 
         // Add support for unique_with validator
-        ValidatorFacade::extend('unique_with', UniqueWithValidator::class.'@validateUniqueWith', trans('validation.unique_with'));
+        ValidatorFacade::extend('unique_with', UniqueWithValidator::class.'@validateUniqueWith', 'The :attribute must be unique with other fields.');
         ValidatorFacade::replacer('unique_with', function () {
             return call_user_func_array([new UniqueWithValidator(), 'replaceUniqueWith'], func_get_args());
         });

@@ -5,9 +5,9 @@
     "license": "MIT",
     "require": {
         "php": "^8.3.0",
-        "illuminate/support": "^11.0.0",
-        "illuminate/contracts": "^11.0.0",
-        "illuminate/database": "^11.0.0"
+        "illuminate/support": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/contracts": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/database": "^10.0.0 || ^11.0.0 || ^12.0.0"
     },
     "require-dev": {
         "orchestra/testbench": "^9.0.0",
@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Rinvex\\LaravelSupport\\": "src/"
+            "Rinvex\\Support\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Rinvex\\LaravelSupport\\Providers\\SupportServiceProvider"
+                "Rinvex\\Support\\Providers\\SupportServiceProvider"
             ]
         }
     }

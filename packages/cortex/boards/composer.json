@@ -1,134 +1,26 @@
 {
     "name": "cortex/boards",
-    "description": "Cortex Boards is a module for Rinvex Cortex that provides a flexible and extensible architecture for building multi-lingual, multi-tenant applications with content management, themeable views, application modules and much more.",
-    "keywords": [
-        "rinvex",
-        "cortex",
-        "flexible",
-        "framework",
-        "laravel",
-        "themes",
-        "solution",
-        "extension",
-        "enterprise",
-        "application",
-        "multi-lingual",
-        "multi-tenant",
-        "bootstrap",
-        "module"
-    ],
+    "description": "Cortex Boards is a boards management system for Laravel Cortex.",
     "type": "library",
     "license": "MIT",
     "homepage": "https://rinvex.com",
-    "support": {
-        "email": "help@rinvex.com",
-        "issues": "https://github.com/rinvex/cortex/issues",
-        "source": "https://github.com/rinvex/cortex",
-        "docs": "https://github.com/rinvex/cortex/blob/master/README.md"
-    },
-    "authors": [
-        {
-            "name": "Rinvex LLC",
-            "homepage": "https://rinvex.com",
-            "email": "help@rinvex.com"
-        },
-        {
-            "name": "Abdelrahman Omran",
-            "homepage": "https://omranic.com",
-            "email": "me@omranic.com",
-            "role": "Project Lead"
-        },
-        {
-            "name": "The Generous Laravel Community",
-            "homepage": "https://github.com/rinvex/cortex/contributors"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "packages/rinvex/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "packages/cortex/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laravel-shift/laravel-self-diagnosis.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laravel-shift/uniquewith-validator.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/moatazcybertalents/cortex-boards.git"
-        }
-    ],
     "require": {
         "php": "^8.3.0",
-        "laravel/framework": "^11.0.0",
-        "illuminate/support": "^11.0.0",
-        "illuminate/contracts": "^11.0.0",
-        "illuminate/database": "^11.0.0",
+        "illuminate/support": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/database": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/console": "^10.0.0 || ^11.0.0 || ^12.0.0",
         "cortex/foundation": "*",
-        "rinvex/laravel-support": "*"
+        "symfony/console": "^7.2.0"
     },
-    "require-dev": {
-        "roave/security-advisories": "dev-master",
-        "barryvdh/laravel-debugbar": "^3.6.0",
-        "barryvdh/laravel-ide-helper": "^2.14.0",
-        "beyondcode/laravel-dump-server": "^1.7.0",
-        "beyondcode/laravel-query-detector": "^1.6.0",
-        "codedungeon/phpunit-result-printer": "^0.32.0",
-        "fakerphp/faker": "^1.19.0",
-        "itsgoingd/clockwork": "^5.1.0",
-        "mockery/mockery": "^1.6.0",
-        "nunomaduro/collision": "^8.0.0",
-        "phpunit/phpunit": "^11.0.0",
-        "symfony/thanks": "^1.2.0"
-    },
-    "autoload-dev": {
+    "autoload": {
         "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan key:generate --ansi --ifnot"
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi --ifnot"
-        ],
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ]
-    },
-    "config": {
-        "sort-packages": true,
-        "preferred-install": "dist",
-        "optimize-autoloader": true,
-        "allow-plugins": {
-            "rinvex/laravel-composer": true,
-            "composer/package-versions-deprecated": true,
-            "symfony/thanks": true
+            "Cortex\\Boards\\": "src"
         }
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-                "rinvex/tmp-lord-laroute",
-                "barryvdh/laravel-debugbar",
-                "appstract/laravel-opcache",
-                "mariuzzo/laravel-js-localization"
+            "providers": [
+                "Cortex\\Boards\\Providers\\BoardsServiceProvider"
             ]
         }
     },
