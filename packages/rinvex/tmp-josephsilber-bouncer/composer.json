@@ -1,0 +1,63 @@
+{
+    "name": "silber/bouncer",
+    "description": "Eloquent roles and abilities.",
+    "keywords": [
+        "abilities",
+        "acl",
+        "capabilities",
+        "eloquent",
+        "laravel",
+        "permissions",
+        "roles"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joseph Silber",
+            "email": "contact@josephsilber.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Silber\\Bouncer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Silber\\Bouncer\\Tests\\": "tests/"
+        },
+        "files": ["tests/helpers.php"]
+    },
+    "require": {
+        "php": "^8.3.0",
+        "illuminate/auth": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/cache": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/container": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/contracts": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/database": "^10.0.0 || ^11.0.0 || ^12.0.0"
+    },
+    "require-dev": {
+        "illuminate/console": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/events": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "larapack/dd": "^1.1",
+        "mockery/mockery": "^1.6.0",
+        "phpunit/phpunit": "^10.1.0"
+    },
+    "suggest": {
+        "illuminate/console": "Allows running the bouncer:clean artisan command",
+        "illuminate/events": "Required for multi-tenancy support"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Silber\\Bouncer\\BouncerServiceProvider"
+            ],
+            "aliases": {
+                "Bouncer": "Silber\\Bouncer\\BouncerFacade"
+            }
+        }
+    }
+}

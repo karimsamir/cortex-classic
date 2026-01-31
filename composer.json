@@ -171,6 +171,12 @@
         "rinvex/laravel-pages": "*",
         "rinvex/laravel-tenants": "*",
         "rinvex/laravel-menus": "*",
+        "rinvex/tmp-lord-laroute": "dev-master",
+        "spatie/laravel-translatable": "*",
+        "spatie/laravel-schemaless-attributes": "*",
+        "spatie/laravel-medialibrary": "*",
+        "appstract/laravel-opcache": "dev-master",
+        "silber/bouncer": "dev-master",
         "predis/predis": "^2.0.0"
     },
     "autoload": {
