@@ -60,7 +60,7 @@
         },
         {
             "type": "path",
-            "url": "packages/cortex/*",
+            "url": "app/modules/cortex/*",
             "options": {
                 "symlink": true
             }
@@ -68,6 +68,13 @@
         {
             "type": "path",
             "url": "app/modules/cortex/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "app/extensions/cortex/*",
             "options": {
                 "symlink": true
             }
@@ -168,16 +175,15 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Cortex\\Foundation\\": "packages/cortex/foundation/src/",
-            "Cortex\\Auth\\": "packages/cortex/auth/src/",
-            "Cortex\\AuthTenantable\\": "packages/cortex/auth-tenantable/src/",
-            "Cortex\\Boards\\": "packages/cortex/boards/src/",
-            "Cortex\\Categories\\": "packages/cortex/categories/src/",
-            "Cortex\\Pages\\": "packages/cortex/pages/src/",
-            "Cortex\\PagesTenantable\\": "packages/cortex/pages-tenantable/src/",
-            "Cortex\\Tags\\": "packages/cortex/tags/src/",
-            "Cortex\\Tenants\\": "packages/cortex/tenants/src/",
+            "Cortex\\Foundation\\": "app/modules/cortex/foundation/src/",
+            "Cortex\\Auth\\": "app/modules/cortex/auth/src/",
+            "Cortex\\Auth\\Tenantable\\": "app/extensions/cortex/auth-tenantable/src/",
+            "Cortex\\Boards\\": "app/modules/cortex/boards/src/",
+            "Cortex\\Categories\\": "app/modules/cortex/categories/src/",
+            "Cortex\\Pages\\": "app/modules/cortex/pages/src/",
+            "Cortex\\Pages\\Tenantable\\": "app/extensions/cortex/pages-tenantable/src/",
+            "Cortex\\Tags\\": "app/modules/cortex/tags/src/",
+            "Cortex\\Tenants\\": "app/modules/cortex/tenants/src/",
             "Rinvex\\Auth\\": "packages/rinvex/laravel-auth/src/",
             "Rinvex\\Categories\\": "packages/rinvex/laravel-categories/src/",
             "Rinvex\\Composer\\": "packages/rinvex/laravel-composer/src/",
@@ -188,7 +194,7 @@
             "Rinvex\\Tenants\\": "packages/rinvex/laravel-tenants/src/"
         },
         "files": [
-            "packages/cortex/foundation/src/helpers.php"
+            "app/modules/cortex/foundation/src/helpers.php"
         ]
     },
     "require-dev": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1af232bfacb57128b93ee4197b86c03",
+    "content-hash": "3cc4df6d1bf754678c3fc051f58a101e",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.369.23",
+            "version": "3.369.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c45d13c95b188b6fc9f31c77083fad6e7dbc3efd"
+                "reference": "17f404a47879c1fb47175ac2b61881ab0dc2dc5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c45d13c95b188b6fc9f31c77083fad6e7dbc3efd",
-                "reference": "c45d13c95b188b6fc9f31c77083fad6e7dbc3efd",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/17f404a47879c1fb47175ac2b61881ab0dc2dc5c",
+                "reference": "17f404a47879c1fb47175ac2b61881ab0dc2dc5c",
                 "shasum": ""
             },
             "require": {
@@ -153,9 +153,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.369.23"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.369.24"
             },
-            "time": "2026-01-29T19:15:41+00:00"
+            "time": "2026-01-30T19:14:32+00:00"
         },
         {
             "name": "brick/math",
@@ -447,8 +447,8 @@
             "version": "dev-upgrade_to_laravel_12_second_try",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/auth",
-                "reference": "6474bf937bcbfd68c92832272757008ea22b98af"
+                "url": "app/modules/cortex/auth",
+                "reference": "b7a4cd54da45aec0f3105359ca9f03721cad360d"
             },
             "require": {
                 "cortex/foundation": "*",
@@ -480,7 +480,8 @@
                     "src/Support/helpers.php"
                 ],
                 "psr-4": {
-                    "Cortex\\Auth\\": "src"
+                    "Cortex\\Auth\\": "src/",
+                    "Cortex\\Auth\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "autoload-dev": {
@@ -550,8 +551,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/auth-tenantable",
-                "reference": "5741c69e398eae874056f16b4258309bd2e3c829"
+                "url": "app/extensions/cortex/auth-tenantable",
+                "reference": "e0d5df543a8e8b5cf0575d69a4ba85d093d748f2"
             },
             "require": {
                 "cortex/auth": "*",
@@ -565,6 +566,9 @@
             },
             "type": "library",
             "extra": {
+                "cortex": {
+                    "extends": "cortex/auth"
+                },
                 "laravel": {
                     "providers": [
                         "Cortex\\Auth\\Tenantable\\Providers\\AuthTenantableServiceProvider"
@@ -573,7 +577,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Cortex\\Auth\\Tenantable\\": "src"
+                    "Cortex\\Auth\\Tenantable\\": "src/"
                 }
             },
             "license": [
@@ -591,7 +595,7 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/boards",
+                "url": "app/modules/cortex/boards",
                 "reference": "c7df9e983ea971235708f3e9c9fa3bb27943a2e7"
             },
             "require": {
@@ -630,8 +634,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/categories",
-                "reference": "ebe612f1bb577019a02f24c30323f68ab4bd4c43"
+                "url": "app/modules/cortex/categories",
+                "reference": "6d314ef41bf568ad5059d4fb0fb0a15b1e27abc0"
             },
             "require": {
                 "cortex/foundation": "*",
@@ -652,7 +656,9 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Cortex\\Categories\\": "src"
+                    "Cortex\\Categories\\": "src/",
+                    "Cortex\\Categories\\Database\\Factories\\": "database/factories/",
+                    "Cortex\\Categories\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
@@ -670,8 +676,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/foundation",
-                "reference": "e131b7d6bf6eb8c0aa941a95fdd2eaf98a0f0cdb"
+                "url": "app/modules/cortex/foundation",
+                "reference": "bf3cb0eb11dfdb0eb91f92d41c00ccb6596eb289"
             },
             "require": {
                 "diglactic/laravel-breadcrumbs": "*",
@@ -714,7 +720,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Cortex\\Foundation\\": "src/"
+                    "Cortex\\Foundation\\": "src/",
+                    "Cortex\\Foundation\\Database\\Seeders\\": "database/seeders/"
                 },
                 "files": [
                     "src/helpers.php"
@@ -787,7 +794,7 @@
             "version": "dev-upgrade_to_laravel_12_second_try",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/pages",
+                "url": "app/modules/cortex/pages",
                 "reference": "fa6cf0ae271d2725c1c36f8e92c6445b824a65ff"
             },
             "require": {
@@ -827,8 +834,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/pages-tenantable",
-                "reference": "32850b8a28b9de9708ef73de3fbae821501cdc3a"
+                "url": "app/extensions/cortex/pages-tenantable",
+                "reference": "f7339484fe767669da92eddad3b32291b5782666"
             },
             "require": {
                 "cortex/foundation": "*",
@@ -842,6 +849,9 @@
             },
             "type": "library",
             "extra": {
+                "cortex": {
+                    "extends": "cortex/pages"
+                },
                 "laravel": {
                     "providers": [
                         "Cortex\\Pages\\Tenantable\\Providers\\PagesTenantableServiceProvider"
@@ -850,7 +860,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Cortex\\Pages\\Tenantable\\": "src"
+                    "Cortex\\Pages\\Tenantable\\": "src/"
                 }
             },
             "license": [
@@ -868,8 +878,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/tags",
-                "reference": "be045763690dff96ee00e06c3c617c6d21937514"
+                "url": "app/modules/cortex/tags",
+                "reference": "0684a52750a5f10ac1b332e04300fee67de82756"
             },
             "require": {
                 "cortex/foundation": "*",
@@ -890,7 +900,9 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Cortex\\Tags\\": "src"
+                    "Cortex\\Tags\\": "src/",
+                    "Cortex\\Tags\\Database\\Factories\\": "database/factories/",
+                    "Cortex\\Tags\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
@@ -908,8 +920,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "packages/cortex/tenants",
-                "reference": "5e47216173e462326851342569df5a6ba5fb2d6d"
+                "url": "app/modules/cortex/tenants",
+                "reference": "0580cb458cc7566f23b4ba3ef20df31e7d1a768b"
             },
             "require": {
                 "cortex/foundation": "*",
@@ -930,7 +942,9 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Cortex\\Tenants\\": "src"
+                    "Cortex\\Tenants\\": "src/",
+                    "Cortex\\Tenants\\Database\\Factories\\": "database/factories/",
+                    "Cortex\\Tenants\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
@@ -3983,7 +3997,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/mcamara/laravel-localization",
-                "reference": "506b9cc87009512ffc4b78b916a2a883511e4fce"
+                "reference": "6e7c5cf7445267f8eacae37e798038c8131695d5"
             },
             "require": {
                 "laravel/framework": "^12.0",
@@ -5516,16 +5530,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.18",
+            "version": "v0.12.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "ddff0ac01beddc251786fe70367cd8bbdb258196"
+                "reference": "a4f766e5c5b6773d8399711019bb7d90875a50ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/ddff0ac01beddc251786fe70367cd8bbdb258196",
-                "reference": "ddff0ac01beddc251786fe70367cd8bbdb258196",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/a4f766e5c5b6773d8399711019bb7d90875a50ee",
+                "reference": "a4f766e5c5b6773d8399711019bb7d90875a50ee",
                 "shasum": ""
             },
             "require": {
@@ -5589,9 +5603,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.18"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.19"
             },
-            "time": "2025-12-17T14:35:46+00:00"
+            "time": "2026-01-30T17:33:13+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
