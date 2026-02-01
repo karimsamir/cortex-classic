@@ -55,6 +55,20 @@
         {
             "type": "vcs",
             "url": "https://github.com/moatazcybertalents/cortex-boards.git"
+        },
+        {
+            "type": "path",
+            "url": "packages/cortex/modules/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/cortex/extensions/*",
+            "options": {
+                "symlink": true
+            }
         }
     ],
     "require": {
@@ -74,7 +88,8 @@
         "predis/predis": "^2.0.0",
         "pusher/pusher-php-server": "^7.0.0",
         "spatie/laravel-db-snapshots": "^2.0.0",
-        "spatie/laravel-ignition": "^2.0.0"
+        "spatie/laravel-ignition": "^2.0.0",
+        "cortex/foundation": "dev-master"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
