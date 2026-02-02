@@ -45,17 +45,17 @@
         "cortex/foundation": "^8.0.0",
         "cortex/pages": "^7.0.0",
         "cortex/tenants": "^8.0.0",
-        "diglactic/laravel-breadcrumbs": "^8.0.0",
-        "laravelcollective/html": "^6.3.0",
+        "diglactic/laravel-breadcrumbs": "^10.0.0",
+        "spatie/laravel-html": "^3.12.3",
         "proengsoft/laravel-jsvalidation": "^4.8.0",
         "rinvex/laravel-composer": "^7.0.0",
         "rinvex/laravel-menus": "^7.0.0",
         "rinvex/laravel-support": "^7.0.0",
         "rinvex/laravel-tenants": "^8.0.0",
-        "yajra/laravel-datatables-buttons": "^10.0.0",
-        "yajra/laravel-datatables-fractal": "^10.0.0",
-        "yajra/laravel-datatables-html": "^10.0.0",
-        "yajra/laravel-datatables-oracle": "^10.4.0"
+        "yajra/laravel-datatables-buttons": "^12.3.1",
+        "yajra/laravel-datatables-fractal": "^12.0.1",
+        "yajra/laravel-datatables-html": "^12.7.0",
+        "yajra/laravel-datatables-oracle": "^12.6.3"
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": "^0.32.0",

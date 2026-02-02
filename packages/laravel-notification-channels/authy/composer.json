@@ -1,18 +1,13 @@
 {
-    "name": "rinvex/authy",
-    "description": "Rinvex Authy is a simple wrapper for Authy TOTP API, the best rated Two-Factor Authentication service for consumers, simplest 2fa Rest API for developers and a strong authentication platform for the enterprise.",
+    "name": "laravel-notification-channels/authy",
+    "description": "Authy notification channel for Laravel, with the ability to send in-app, sms, and call verification tokens.",
     "type": "library",
     "keywords": [
         "sms",
         "call",
         "authy",
-        "message",
-        "security",
-        "twofactor",
+        "laravel",
         "verification",
-        "authentication",
-        "automated",
-        "register",
         "rinvex",
         "phone",
         "token"
@@ -21,9 +16,9 @@
     "homepage": "https://rinvex.com",
     "support": {
         "email": "help@rinvex.com",
-        "issues": "https://github.com/rinvex/authy/issues",
-        "source": "https://github.com/rinvex/authy",
-        "docs": "https://github.com/rinvex/authy/README.md"
+        "issues": "https://github.com/laravel-notification-channels/authy/issues",
+        "source": "https://github.com/laravel-notification-channels/authy",
+        "docs": "https://github.com/laravel-notification-channels/authy/blob/master/README.md"
     },
     "authors": [
         {
@@ -39,27 +34,37 @@
         },
         {
             "name": "The Generous Laravel Community",
-            "homepage": "https://github.com/rinvex/authy/contributors"
+            "homepage": "https://github.com/laravel-notification-channels/authy/contributors"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../rinvex/authy",
+            "options": {
+                "symlink": true
+            }
         }
     ],
     "require": {
         "php": "^8.3.0",
-        "guzzlehttp/guzzle": "^7.4.0",
-        "psr/http-message": "^2.0.0"
+        "illuminate/queue": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/notifications": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "rinvex/laravel-authy": "dev-master"
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": "^0.32.0",
-        "mockery/mockery": "^1.6.0",
-        "phpunit/phpunit": "^10.1.0"
+        "phpunit/phpunit": "^9.5.0",
+        "mockery/mockery": "^1.4.0"
     },
     "autoload": {
         "psr-4": {
-            "Rinvex\\Authy\\": "src"
+            "NotificationChannels\\Authy\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rinvex\\Authy\\Tests\\": "tests"
+            "NotificationChannels\\Authy\\Test\\": "tests"
         }
     },
     "scripts": {
