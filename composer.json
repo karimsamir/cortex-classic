@@ -97,7 +97,8 @@
         "spatie/laravel-db-snapshots": "^2.0.0",
         "spatie/laravel-ignition": "^2.0.0",
         "cortex/foundation": "dev-master",
-        "rinvex/laravel-support": "dev-master"
+        "rinvex/laravel-support": "dev-master",
+        "rinvex/laravel-composer": "dev-master"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
@@ -132,6 +133,7 @@
         "optimize-autoloader": true,
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
+            "rinvex/laravel-composer": true,
             "symfony/thanks": true
         }
     },
