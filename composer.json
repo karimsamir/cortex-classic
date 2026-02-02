@@ -96,9 +96,9 @@
         "pusher/pusher-php-server": "^7.0.0",
         "spatie/laravel-db-snapshots": "^2.0.0",
         "spatie/laravel-ignition": "^2.0.0",
-        "cortex/foundation": "dev-master",
         "rinvex/laravel-support": "dev-master",
-        "rinvex/laravel-composer": "dev-master"
+        "rinvex/laravel-composer": "dev-master",
+        "cortex/foundation": "dev-master"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
