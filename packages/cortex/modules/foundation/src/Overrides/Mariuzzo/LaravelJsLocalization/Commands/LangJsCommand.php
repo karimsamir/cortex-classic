@@ -6,6 +6,8 @@ namespace Cortex\Foundation\Overrides\Mariuzzo\LaravelJsLocalization\Commands;
 
 use Symfony\Component\Console\Attribute\AsCommand;
 use Mariuzzo\LaravelJsLocalization\Commands\LangJsCommand as BaseLangJsCommand;
+use Mariuzzo\LaravelJsLocalization\Generators\LangJsGenerator;
+
 
 #[AsCommand(name: 'lang:js')]
 class LangJsCommand extends BaseLangJsCommand
@@ -13,7 +15,7 @@ class LangJsCommand extends BaseLangJsCommand
     /**
      * Handle the command.
      */
-    public function handle()
+    public function handle(LangJsGenerator $generator)
     {
         $this->line('');
         $target = $this->argument('target');

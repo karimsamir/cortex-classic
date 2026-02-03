@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Cortex\Foundation\Overrides\Illuminate\Session;
 
+use BackedEnum;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Session\Store as BaseStore;
+use UnitEnum;
 
 class Store extends BaseStore
 {
@@ -43,12 +45,12 @@ class Store extends BaseStore
     /**
      * Flash a key / value pair to the session.
      *
-     * @param string $key
+     * @param  \BackedEnum|\UnitEnum|string  $key
      * @param mixed  $value
      *
      * @return void
      */
-    public function flash(string $key, $value = true)
+    public function flash(BackedEnum|UnitEnum|string $key, $value = true)
     {
         $this->put($key, $value);
 

@@ -185,7 +185,7 @@ class FoundationServiceProvider extends ServiceProvider
     protected function overrideLaravelLocalization(): void
     {
         $this->app->singleton('laravellocalization', function () {
-            return new LaravelLocalization();
+            return $this->app->make(LaravelLocalization::class);
         });
     }
 
