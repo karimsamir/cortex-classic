@@ -66,7 +66,7 @@
         "cortex/foundation": "dev-master",
         "diglactic/laravel-breadcrumbs": "^10.0.0",
         "laravel/socialite": "^5.6.0",
-        "spatie/laravel-html": "^3.12.3",
+        "laravelcollective/html": "dev-master",
         "laravel-notification-channels/authy": "dev-master",
         "league/fractal": "^0.20.0",
         "pragmarx/google2fa": "^8.0.0",

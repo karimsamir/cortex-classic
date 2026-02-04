@@ -55,7 +55,7 @@
         "cortex/auth": "dev-master",
         "cortex/foundation": "dev-master",
         "diglactic/laravel-breadcrumbs": "^10.0.0",
-        "spatie/laravel-html": "^3.12.3",
+        "laravelcollective/html": "dev-master",
         "league/fractal": "^0.20.0",
         "proengsoft/laravel-jsvalidation": "^4.8.0",
         "rinvex/laravel-composer": "dev-master",

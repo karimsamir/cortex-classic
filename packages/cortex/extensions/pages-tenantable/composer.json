@@ -46,7 +46,7 @@
         "cortex/pages": "dev-master",
         "cortex/tenants": "dev-master",
         "diglactic/laravel-breadcrumbs": "^10.0.0",
-        "spatie/laravel-html": "^3.12.3",
+        "laravelcollective/html": "dev-master",
         "proengsoft/laravel-jsvalidation": "^4.8.0",
         "rinvex/laravel-composer": "dev-master",
         "rinvex/laravel-menus": "dev-master",
