@@ -60,28 +60,28 @@
             "type": "path",
             "url": "packages/cortex/modules/*",
             "options": {
-                "symlink": true
+                "symlink": false
             }
         },
         {
             "type": "path",
             "url": "packages/cortex/extensions/*",
             "options": {
-                "symlink": true
+                "symlink": false
             }
         },
         {
             "type": "path",
             "url": "packages/laravel-notification-channels/*",
             "options": {
-                "symlink": true
+                "symlink": false
             }
         },
         {
             "type": "path",
             "url": "packages/rinvex/*",
             "options": {
-                "symlink": true
+                "symlink": false
             }
         }
     ],

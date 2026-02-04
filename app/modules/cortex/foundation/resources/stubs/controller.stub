@@ -1,0 +1,108 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Illuminate\Http\Request;
+use {{ namespacedModel }};
+use Cortex\Foundation\Importers\InsertImporter;
+use Cortex\Foundation\Http\Requests\ImportFormRequest;
+use Cortex\Foundation\Http\Controllers\AuthorizedController;
+
+class {{ class }} extends AuthorizedController
+{
+    /**
+     * List all records.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Import resources.
+     *
+     * @param \Cortex\Foundation\Http\Requests\ImportFormRequest $request
+     * @param \Cortex\Foundation\Importers\InsertImporter        $importer
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     *
+     * @return void
+     */
+    public function import(ImportFormRequest $request, InsertImporter $importer, {{ model }} ${{ modelVariable }})
+    {
+        $importer->withModel(${{ modelVariable }})->import($request->file('file'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store new record.
+     *
+     * @param  \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Edit given record.
+     *
+     * @param int $id
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update given record.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  int                                     $id
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Destroy given record.
+     *
+     * @param int $id
+     *
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}

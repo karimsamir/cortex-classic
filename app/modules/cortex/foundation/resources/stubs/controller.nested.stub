@@ -1,0 +1,119 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use Illuminate\Http\Request;
+use Parent{{ namespacedModel }};
+use Cortex\Foundation\Importers\InsertImporter;
+use Cortex\Foundation\Http\Requests\ImportFormRequest;
+use Cortex\Foundation\Http\Controllers\AuthorizedController;
+
+class {{ class }} extends AuthorizedController
+{
+    /**
+     * List all records.
+     *
+     * @param  \Parent{{ namespacedModel }}  ${{ parentModelVariable }}
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index({{ parentModel }} ${{ parentModelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Import resources.
+     *
+     * @param \Cortex\Foundation\Http\Requests\ImportFormRequest $request
+     * @param \Cortex\Foundation\Importers\InsertImporter        $importer
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     *
+     * @return void
+     */
+    public function import(ImportFormRequest $request, InsertImporter $importer, {{ model }} ${{ modelVariable }})
+    {
+        $importer->withModel(${{ modelVariable }})->import($request->file('file'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @param  \Parent{{ namespacedModel }}  ${{ parentModelVariable }}
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create({{ parentModel }} ${{ parentModelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Store new record.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Parent{{ namespacedModel }}              ${{ parentModelVariable }}
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request, {{ parentModel }} ${{ parentModelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \Parent{{ namespacedModel }}  ${{ parentModelVariable }}
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show({{ parentModel }} ${{ parentModelVariable }}, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Edit given record.
+     *
+     * @param  \Parent{{ namespacedModel }}  ${{ parentModelVariable }}
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function edit({{ parentModel }} ${{ parentModelVariable }}, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Update given record.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Parent{{ namespacedModel }}              ${{ parentModelVariable }}
+     * @param  \{{ namespacedModel }}                    ${{ modelVariable }}
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, {{ parentModel }} ${{ parentModelVariable }}, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Destroy given record.
+     *
+     * @param \Parent{{ namespacedModel }} ${{ parentModelVariable }}
+     * @param \{{ namespacedModel }} ${{ modelVariable }}
+     *
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
+    public function destroy({{ parentModel }} ${{ parentModelVariable }}, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+}
