@@ -90,6 +90,13 @@
             "options": {
                 "symlink": false
             }
+        },
+        {
+            "type": "path",
+            "url": "packages/mariuzzo/laravel-js-localization",
+            "options": {
+                "symlink": false
+            }
         }
     ],
     "require": {
