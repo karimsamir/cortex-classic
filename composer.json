@@ -83,6 +83,13 @@
             "options": {
                 "symlink": false
             }
+        },
+        {
+            "type": "path",
+            "url": "packages/laravelcollective/*",
+            "options": {
+                "symlink": false
+            }
         }
     ],
     "require": {
