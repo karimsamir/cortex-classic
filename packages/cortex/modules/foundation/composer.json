@@ -72,7 +72,7 @@
         "mcamara/laravel-localization": "^2.3.0",
         "mariuzzo/laravel-js-localization": "dev-master",
         "appstract/laravel-opcache": "^4.0.0",
-        "proengsoft/laravel-jsvalidation": "^4.8.0",
+        "proengsoft/laravel-jsvalidation": "^4.10.2",
         "rinvex/laravel-composer": "dev-master",
         "rinvex/laravel-menus": "dev-master",
         "rinvex/laravel-pages": "dev-master",

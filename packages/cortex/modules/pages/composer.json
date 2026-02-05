@@ -52,7 +52,7 @@
         "diglactic/laravel-breadcrumbs": "^10.0.0",
         "laravelcollective/html": "dev-master",
         "league/fractal": "^0.20.0",
-        "proengsoft/laravel-jsvalidation": "^4.8.0",
+        "proengsoft/laravel-jsvalidation": "^4.10.2",
         "rinvex/laravel-composer": "dev-master",
         "rinvex/laravel-menus": "dev-master",
         "rinvex/laravel-pages": "dev-master",

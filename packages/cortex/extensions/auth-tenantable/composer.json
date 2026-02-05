@@ -69,7 +69,7 @@
         "laravelcollective/html": "dev-master",
         "league/fractal": "^0.20.0",
         "pragmarx/google2fa": "^8.0.0",
-        "proengsoft/laravel-jsvalidation": "^4.8.0",
+        "proengsoft/laravel-jsvalidation": "^4.10.2",
         "propaganistas/laravel-phone": "^5.0.0",
         "rinvex/laravel-auth": "dev-master",
         "rinvex/laravel-composer": "dev-master",
