@@ -183,8 +183,7 @@ return [
         /*
          * Package Service Providers...
          */
-        App\Cortex\Universities\Providers\UniversitiesServiceProvider::class,
-
+        App\Cortex\University\Providers\UniversityServiceProvider::class,
 
     ],
 

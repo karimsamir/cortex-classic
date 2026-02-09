@@ -1,6 +1,6 @@
 {
-  "name": "cortex/universities",
-  "description": "Cortex Universities is a new module for rinvex/cortex applications.",
+  "name": "cortex/university",
+  "description": "Cortex University is a new module for rinvex/cortex applications.",
   "type": "cortex-module",
   "keywords": [
     "rinvex",
@@ -22,9 +22,9 @@
   "homepage": "https://rinvex.com",
   "support": {
     "email": "help@rinvex.com",
-    "issues": "https://github.com/rinvex/cortex-universities/issues",
-    "source": "https://github.com/rinvex/cortex-universities",
-    "docs": "https://github.com/rinvex/cortex-universities/README.md"
+    "issues": "https://github.com/rinvex/cortex-university/issues",
+    "source": "https://github.com/rinvex/cortex-university",
+    "docs": "https://github.com/rinvex/cortex-university/README.md"
   },
   "authors": [
     {
@@ -40,7 +40,7 @@
     },
     {
       "name": "The Generous Laravel Community",
-      "homepage": "https://github.com/rinvex/cortex-universities/contributors"
+      "homepage": "https://github.com/rinvex/cortex-university/contributors"
     }
   ],
   "require": {
@@ -71,12 +71,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Cortex\\Universities\\": "src/"
+      "App\\Cortex\\University\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Cortex\\Universities\\Tests\\": "tests"
+      "App\\Cortex\\University\\Tests\\": "tests"
     }
   },
   "scripts": {
@@ -90,7 +90,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Cortex\\Universities\\Providers\\UniversitiesServiceProvider"
+        "App\\Cortex\\University\\Providers\\UniversityServiceProvider"
       ]
     }
   },

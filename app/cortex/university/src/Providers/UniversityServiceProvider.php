@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Cortex\Universities\Providers;
+namespace App\Cortex\University\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class UniversitiesServiceProvider extends ServiceProvider
+class UniversityServiceProvider extends ServiceProvider
 {
     /**
      * Register services.

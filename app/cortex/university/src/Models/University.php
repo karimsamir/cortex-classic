@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cortex\Universities\Models;
+namespace App\Cortex\University\Models;
 
 use Cortex\Universities\Models\University as BaseUniversity;
 
