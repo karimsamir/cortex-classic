@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-use App\Cortex\Universities\Http\Controllers\Adminarea\UniversitiesController;
+use Cortex\Universities\Http\Controllers\Adminarea\UniversitiesController;
 
 Route::domain('{adminarea}')->group(function () {
     Route::name('adminarea.')
          ->middleware(['web', 'nohttpcache', 'can:access-adminarea'])
          ->prefix(route_prefix('adminarea'))->group(function () {
              // Universities Routes
-             Route::name('universities.')->prefix('universities')->group(function () {
+             Route::name('cortex.universities.')->prefix('universities')->group(function () {
                  Route::match(['get', 'post'], '/')->name('index')->uses([UniversitiesController::class, 'index']);
                  Route::get('create')->name('create')->uses([UniversitiesController::class, 'create']);
                  Route::post('create')->name('store')->uses([UniversitiesController::class, 'store']);

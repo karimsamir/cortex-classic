@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Cortex\Universities\Http\Controllers\Adminarea;
+namespace Cortex\Universities\Http\Controllers\Adminarea;
 
-use App\Cortex\Universities\Models\University;
+use Cortex\Universities\Models\University;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
@@ -44,7 +44,7 @@ class UniversitiesController extends AuthorizedController
 
         return view('adminarea.universities.index', compact(
             'universities',
-            'countries', 
+            'countries',
             'fundingTypes'
         ));
     }
@@ -69,7 +69,7 @@ class UniversitiesController extends AuthorizedController
         }
 
         $data = $validator->validated();
-        
+
         // Convert languages from comma-separated string to array
         if (isset($data['languages']) && is_string($data['languages'])) {
             $data['languages'] = array_map('trim', explode(',', $data['languages']));
@@ -111,7 +111,7 @@ class UniversitiesController extends AuthorizedController
         }
 
         $data = $validator->validated();
-        
+
         // Convert languages from comma-separated string to array
         if (isset($data['languages']) && is_string($data['languages'])) {
             $data['languages'] = array_map('trim', explode(',', $data['languages']));

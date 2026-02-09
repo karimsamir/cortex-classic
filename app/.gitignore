@@ -1,3 +1,5 @@
 *
 !.gitignore
-!cortex
+!cortex/
+!Cortex/
+!cortex/**

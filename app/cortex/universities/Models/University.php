@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Cortex\Universities\Models;
+namespace Cortex\Universities\Models;
 
 use Cortex\Universities\Models\University as BaseUniversity;
 
@@ -10,7 +10,7 @@ class University extends BaseUniversity
 {
     // The model extends the base University model from the package
     // You can add any additional functionality or overrides here
-    
+
     /**
      * Get validation rules for university fields.
      */

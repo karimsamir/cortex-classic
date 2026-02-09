@@ -1,6 +1,6 @@
 <?php
 
-namespace Cortex\Universities\Providers;
+namespace App\Cortex\Universities\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,7 +19,10 @@ class UniversitiesServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/../../routes/adminarea.php');
+        $routesPath = __DIR__.'/../../routes/adminarea.php';
+
+        $this->loadRoutesFrom($routesPath);
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'cortex_universities');
+
     }
 }
