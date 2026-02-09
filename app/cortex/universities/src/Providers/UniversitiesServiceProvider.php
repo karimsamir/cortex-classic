@@ -1,0 +1,25 @@
+<?php
+
+namespace Cortex\Universities\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class UniversitiesServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     */
+    public function register(): void
+    {
+        //
+    }
+
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
+    {
+        $this->loadRoutesFrom(__DIR__.'/../../routes/adminarea.php');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'cortex_universities');
+    }
+}
