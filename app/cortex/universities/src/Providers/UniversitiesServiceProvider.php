@@ -19,10 +19,10 @@ class UniversitiesServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $routesPath = __DIR__.'/../../routes/adminarea.php';
+        $routesPath = __DIR__.'/../../../routes/adminarea.php';
 
         $this->loadRoutesFrom($routesPath);
-        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'cortex_universities');
+        $this->loadViewsFrom(__DIR__.'/../../../resources/views', 'cortex_universities');
 
     }
 }
