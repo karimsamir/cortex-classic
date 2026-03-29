@@ -1,0 +1,30 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use Rinvex\Support\Traits\Escaper;
+use League\Fractal\TransformerAbstract;
+
+class {{ class }} extends TransformerAbstract
+{
+    use Escaper;
+
+    /**
+     * Transform the given model.
+     *
+     * @param \{{ namespacedModel }} ${{ modelVariable }}
+     *
+     * @throws \Exception
+     *
+     * @return array
+     */
+    public function transform({{ modelVariable }} ${{ modelVariable }}): array
+    {
+        return $this->escape([
+            //
+        ]);
+    }
+}

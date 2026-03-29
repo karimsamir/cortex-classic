@@ -1,0 +1,34 @@
+{
+    "name": "rinvex/tmp-edvinaskrucas-notification",
+    "keywords": ["laravel", "notifications", "messages", "flash", "instant"],
+    "description": "Package for Laravel for helping to manage flash / instant notifications / messages.",
+    "authors": [
+        {
+            "name": "Edvinas Kručas",
+            "email": "edv.krucas@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.3.0",
+        "illuminate/support": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/session": "^10.0.0 || ^11.0.0 || ^12.0.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.5.0",
+        "phpunit/phpunit": "^10.1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Krucas\\Notification": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Krucas\\Notification\\NotificationServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

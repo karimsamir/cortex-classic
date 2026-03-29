@@ -318,4 +318,6 @@ return [
         // 'ide-helper:models --nowrite',
     ],
 
+    'write_translations' => false,
+
 ];

@@ -1,0 +1,124 @@
+{
+    "name": "cortex/auth",
+    "description": "Cortex Auth is a frontend layer for the powerful authentication, authorization and verification package rinvex/laravel-auth on top of Laravel. It has all required controllers, views, routes, and other required assets to run a fully functional user management system with complete dashboard out of the box.",
+    "type": "cortex-module",
+    "keywords": [
+        "authentication",
+        "authorization",
+        "verification",
+        "activation",
+        "abilities",
+        "cortex",
+        "phone",
+        "sms",
+        "call",
+        "users",
+        "module",
+        "security",
+        "twofactor",
+        "laravel",
+        "rinvex",
+        "rbac",
+        "totp",
+        "acl",
+        "roles"
+    ],
+    "license": "MIT",
+    "homepage": "https://rinvex.com",
+    "support": {
+        "email": "help@rinvex.com",
+        "issues": "https://github.com/rinvex/cortex-auth/issues",
+        "source": "https://github.com/rinvex/cortex-auth",
+        "docs": "https://github.com/rinvex/cortex-auth/README.md"
+    },
+    "authors": [
+        {
+            "name": "Rinvex LLC",
+            "homepage": "https://rinvex.com",
+            "email": "help@rinvex.com"
+        },
+        {
+            "name": "Abdelrahman Omran",
+            "homepage": "https://omranic.com",
+            "email": "me@omranic.com",
+            "role": "Project Lead"
+        },
+        {
+            "name": "The Generous Laravel Community",
+            "homepage": "https://github.com/rinvex/cortex-auth/contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.3.0",
+        "illuminate/auth": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/broadcasting": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/bus": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/console": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/contracts": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/database": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/http": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/notifications": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/queue": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/routing": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/session": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/support": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "illuminate/validation": "^10.0.0 || ^11.0.0 || ^12.0.0",
+        "cortex/foundation": "dev-master",
+        "diglactic/laravel-breadcrumbs": "^10.0.0",
+        "laravel/socialite": "^5.6.0",
+        "laravelcollective/html": "dev-master",
+        "laravel-notification-channels/authy": "dev-master",
+        "league/fractal": "^0.20.0",
+        "pragmarx/google2fa": "^8.0.0",
+        "proengsoft/laravel-jsvalidation": "^4.10.2",
+        "propaganistas/laravel-phone": "^5.0.0",
+        "rinvex/laravel-auth": "dev-master",
+        "rinvex/laravel-composer": "dev-master",
+        "rinvex/countries": "dev-master",
+        "rinvex/languages": "dev-master",
+        "rinvex/laravel-menus": "dev-master",
+        "rinvex/laravel-support": "dev-master",
+        "rinvex/laravel-tags": "dev-master",
+        "rinvex/tmp-josephsilber-bouncer": "dev-master",
+        "spatie/laravel-activitylog": "^4.7.0",
+        "spatie/laravel-medialibrary": "^11.17.10",
+        "spatie/laravel-schemaless-attributes": "^2.4.0",
+        "yajra/laravel-datatables-buttons": "^12.3.1",
+        "yajra/laravel-datatables-fractal": "^12.0.1",
+        "yajra/laravel-datatables-html": "^12.7.0",
+        "yajra/laravel-datatables-oracle": "^12.6.3",
+        "symfony/console": "^7.4.4"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "^0.32.0",
+        "phpunit/phpunit": "^10.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cortex\\Auth\\": "src/",
+            "Cortex\\Auth\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cortex\\Auth\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cortex\\Auth\\Providers\\AuthServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

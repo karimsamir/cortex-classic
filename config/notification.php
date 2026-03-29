@@ -56,7 +56,7 @@ return [
     | :message - message text.
     |
     */
-    'default_format' => "<script>window.notification = function() { $.notify({message: ':message'}, {type: ':type', mouse_over: 'pause', z_index: 9999, animate:{enter: \"animated fadeIn\", exit: \"animated fadeOut\"}}); }; if (typeof window.notification === 'function') { notification(); window.notification = null; } }</script>",
+    'default_format' => "<script>window.notification = function() { $.notify({message: ':message'}, {type: ':type', mouse_over: 'pause', z_index: 9999, animate:{enter: \"animated fadeIn\", exit: \"animated fadeOut\"}}); }; if (typeof window.notification === 'function') { notification(); window.notification = null; } </script>",
 
     /*
     |--------------------------------------------------------------------------
